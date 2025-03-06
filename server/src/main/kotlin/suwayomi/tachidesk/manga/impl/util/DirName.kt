@@ -60,14 +60,20 @@ fun getChapterCbzPath(
     mangaId: Int,
     chapterId: Int,
     mayBeCbz: String = getChapterDownloadPath(mangaId, chapterId),
-    fileToCbz: String = mayBeCbz + ".cbz"
-): String {
-    return if (mayBeCbz.endsWith(".cbz")) {
+    fileToCbz: String = mayBeCbz + ".cbz",
+): String = if (mayBeCbz.endsWith(".cbz")) mayBeCbz else fileToCbz
+
+/*fun getChapterCbzPath(
+    mangaId: Int,
+    chapterId: Int,
+    mayBeCbz: String = getChapterDownloadPath(mangaId, chapterId),
+    fileToCbz: String = mayBeCbz + ".cbz",
+): String =
+    if (mayBeCbz.endsWith(".cbz")) {
         mayBeCbz
     } else {
         fileToCbz
-    }
-}
+    }*/
 
 fun getChapterCachePath(
     mangaId: Int,
