@@ -55,9 +55,7 @@ fun getChapterDownloadPath(
     chapterId: Int,
 ): String = applicationDirs.mangaDownloadsRoot + "/" + getChapterDir(mangaId, chapterId)
 
-/* Files that already were cbz files would become .cbz.cbz
-   Now they stay as they should */
-
+// Files that already were cbz files would become .cbz.cbz, now they stay as they should
 fun getChapterCbzPath(
     mangaId: Int,
     chapterId: Int,
